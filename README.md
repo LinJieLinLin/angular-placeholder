@@ -1,5 +1,5 @@
 # angular-placeholder
-## angular-placeholder for ie8 or ie9
+## angular-placeholder for ie8 and ie9
 # Usage:
 #### add file:
 ```
