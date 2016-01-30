@@ -8,5 +8,6 @@
         "angular",
         "placeholder",
         "javascript"
-    ]
+    ],
+    homepage: "https://github.com/LinJieLinLin/angular-placeholder"
 }
