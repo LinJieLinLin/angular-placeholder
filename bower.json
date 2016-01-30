@@ -1,0 +1,12 @@
+{
+    "name": "angular-placeholder",
+    "version": "0.0.1",
+    "main": "placeholder-ie.js",
+    "license": "MIT",
+    "ignore": [],
+    "keywords": [
+        "angular",
+        "placeholder",
+        "javascript"
+    ]
+}
