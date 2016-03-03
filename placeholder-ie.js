@@ -30,13 +30,18 @@ angular.module('directive', []).directive('placeholder', function() {
                     //对password框的特殊处理
                     if (attr.type === 'password') {
                         e.removeClass('placeholder-style');
-                        e.after('<input id="pwdPlaceholder" type="text" value=' + attr.placeholder + ' autocomplete="off" class="placeholder-style" />');
-                        var pwdPlaceholder = angular.element('#pwdPlaceholder');
-                        pwdPlaceholder.show();
+                        var temId = new Date().getTime();
+                        e.after('<input id="' + temId +
+                            '" type="text" value="' + attr.placeholder +
+                            '" autocomplete="off" style="' + attr.style +
+                            '" class="' + attr.class +
+                            ' placeholder-style" />');
+                        var pwd = angular.element('#'+temId);
+                        pwd.show();
                         e.hide();
 
-                        pwdPlaceholder.focus(function() {
-                            pwdPlaceholder.hide();
+                        pwd.focus(function() {
+                            pwd.hide();
                             e.show();
                             e.focus();
                         });
@@ -59,7 +64,7 @@ angular.module('directive', []).directive('placeholder', function() {
                         isFocus = false;
                         if (attr.type === 'password') {
                             if (e.val() === '') {
-                                pwdPlaceholder.show();
+                                pwd.show();
                                 e.hide();
                             }
                         } else {
